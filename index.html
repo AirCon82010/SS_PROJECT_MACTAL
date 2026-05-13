@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Logic Master: 15 Challenges</title>
+    <link rel="stylesheet" href="https://pyscript.net/releases/2024.1.1/core.css" />
+    <script type="module" src="https://pyscript.net/releases/2024.1.1/core.js"></script>
+    <style>
+        body { font-family: Georgia, 'Times New Roman', Times, serif; background: #eff1d7; display: flex; justify-content: center; padding: 20px; }
+        .wrapper { width: 100%; max-width: 900px; background: white; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.1); overflow: hidden; }
+        .header { background: #e8cd4a; color: white; padding: 20px; text-align: center; }
+        .game-body { padding: 30px; }
+        .scenario-box { font-size: 1.5em; min-height: 100px; padding: 20px; background: #f9f9f9; border-left: 10px solid #f8f4c5; margin-bottom: 30px; border-radius: 4px; }
+        .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
+        button { padding: 20px; font-size: 1.1em; cursor: pointer; border: 1px solid #ddd; border-radius: 8px; transition: 0.2s; background: white; }
+        button:hover { background: #3498db; color: white; }
+        #feedback { text-align: center; margin-top: 20px; font-weight: bold; min-height: 24px; }
+        .footer { padding: 15px; background: #eee; display: flex; justify-content: space-between; font-weight: bold; }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="header">
+            <h1>LOGIC IS FOR EVERYONE</h1>
+            <p>Idol: Sir Teddy John Hablado</p>
+        </div>
+        <div class="game-body">
+            <div id="scenario" class="scenario-box">Loading...</div>
+            <div class="grid">
+                <button py-click="check_answer" id="opt0"></button>
+                <button py-click="check_answer" id="opt1"></button>
+                <button py-click="check_answer" id="opt2"></button>
+                <button py-click="check_answer" id="opt3"></button>
+            </div>
+            <div id="feedback"></div>
+        </div>
+        <div class="footer">
+            <span>Score: <span id="score">0</span> / <span id="max-score">15</span></span>
+            <span>Social Studies 10 - Q4 Project</span>
+        </div>
+    </div>
+    <script type="py" src="main.py" config='{"interpreter_terminate_heartbeat": false}'></script>
+</body>
+</html>
